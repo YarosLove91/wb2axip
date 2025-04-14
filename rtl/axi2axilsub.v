@@ -633,13 +633,13 @@ module axi2axilsub #(
 
 		always @(*)
 		if (S_AXI_ARESETN)
-			assert(m_axi_awvalid == (mst_awbeats > 0));
+			assert(m_awvalid == (mst_awbeats > 0));
 `endif
 		// }}}
 
 		// m_awvalid
 		// {{{
-		initial	m_axi_awvalid = 0;
+		initial	m_awvalid = 0;
 		always @(posedge S_AXI_ACLK)
 		if (!S_AXI_ARESETN)
 			m_awvalid <= 0;
