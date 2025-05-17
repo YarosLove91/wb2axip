@@ -93,7 +93,7 @@ module	axil2apb #(
 	// {{{
 	localparam	AW = C_AXI_ADDR_WIDTH;
 	localparam	DW = C_AXI_DATA_WIDTH;
-	localparam	AXILLSB = $clog2(C_AXI_DATA_WIDTH)-3;
+	localparam	AXILLSB = 0;
 	wire				awskd_valid, wskd_valid, arskd_valid;
 	reg				axil_write_ready, axil_read_ready,
 					write_grant, apb_idle;
